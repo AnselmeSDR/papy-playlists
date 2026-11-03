@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "spotify": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "D=/tmp/mcp-claude-spotify; [ -d \"$D\" ] || git clone -q --depth 1 https://github.com/AnselmeSDR/mcp-claude-spotify.git \"$D\" >&2; cd \"$D\" && npm install --omit=dev --no-audit --no-fund >&2 && exec node build/index.js"
+      ],
+      "env": {
+        "SPOTIFY_CLIENT_ID": "${SPOTIFY_CLIENT_ID}",
+        "SPOTIFY_CLIENT_SECRET": "${SPOTIFY_CLIENT_SECRET}",
+        "SPOTIFY_REFRESH_TOKEN": "${SPOTIFY_REFRESH_TOKEN}"
+      }
+    }
+  }
+}

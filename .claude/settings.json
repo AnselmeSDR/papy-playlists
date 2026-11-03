@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 papy-weekly/reco.py:*)",
+      "Bash(python3 papy-weekly/validate.py:*)"
+    ]
+  }
+}

@@ -12,8 +12,9 @@ which rebuilds the "Papy Weekly" playlist every Monday with 100 discovery tracks
 Why Deezer: Spotify blocks recommendations (404), other users' playlists (403) and artist
 genres for development-mode apps. Tracks are mapped back to Spotify by ISRC.
 
-Network: the cloud environment must reach `api.deezer.com` (otherwise the routine falls back
-to the model's own knowledge and says so in its report).
+This repository is the routine's only source; its root `.mcp.json` starts the Spotify MCP server.
+Network: the cloud environment must reach `api.deezer.com` (otherwise the routine falls back to
+the model's own knowledge and says so in its report).
 
 Local dry run (no Spotify write): put `seeds.json`, `known.txt`, `recent.txt`, `exclude.txt`
 in a folder, then `python3 reco.py <folder>` and `python3 validate.py <folder>`.
